@@ -1,0 +1,54 @@
+{
+    "initial": {
+        "messages": [
+            "Semen, hello",
+            "Did you prepare coupons for the issue of goods as I told you?"
+        ],
+        "responses": {
+            "Yes": {
+                "next": "dep_yes",
+                "messages": [
+                    "Yes. I will bring them to your office today"
+                ]
+            },
+            "Maybe": {
+                "next": "dep_maybe",
+                "messages": [
+                    "Maybe",
+                    "I will end this tomorrow *_*"
+                ]
+            },
+            "No": {
+                "next": "we_dont_need_you",
+                "messages": [
+                    "No. I changed my mind and refuse."
+                ]
+            }
+        }
+    },
+    "dep_yes": {
+        "messages": [
+            "I will apply for your admission to the finance department."
+        ]
+    },
+    "dep_maybe": {
+        "messages": [
+            "Hurry up. Deadline tomorrow",
+            "you will die"
+        ],
+        "responses": {
+            "I wanna die": {
+                "next": "exit"
+            }
+        }
+    },
+    "we_dont_need_you": {
+        "messages": [
+            "We don't fucking need you then, I'm taking you off the probationary period, don't contact us ever again.",
+            "We don't need Tuniyad people"
+        ]
+    },
+    "exit": {
+        "messages": []
+    }
+}

@@ -1,2 +1,5 @@
 # VCommune
-Pygame game about denunciations to the great state
+Free time project written on [pygame](https://www.pygame.org/news).
+
+## Contributing
+* [Trello Desk](https://trello.com/b/qftHdITV/vcommune)
