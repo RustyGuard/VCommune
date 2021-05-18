@@ -1,54 +1,84 @@
-{
-    "initial": {
+[
+    {
+        "name": "initial",
         "messages": [
-            "Semen, hello",
-            "Did you prepare coupons for the issue of goods as I told you?"
+            {
+                "text": "Semen, hello"
+            },
+            {
+                "text": "Did you prepare coupons for the issue of goods as I told you?"
+            }
         ],
-        "responses": {
-            "Yes": {
-                "next": "dep_yes",
+        "responses": [
+            {
+                "text": "Yes",
+                "next_dialog": "dep_yes",
                 "messages": [
-                    "Yes. I will bring them to your office today"
+                    {
+                        "text": "Yes. I will bring them to your office today",
+                        "right_side": false
+                    }
                 ]
             },
-            "Maybe": {
-                "next": "dep_maybe",
+            {
+                "text": "Maybe",
+                "next_dialog": "dep_maybe",
                 "messages": [
-                    "Maybe",
-                    "I will end this tomorrow *_*"
+                    {
+                        "text": "Maybe",
+                        "right_side": false
+                    },
+                    {
+                        "text": "I will end this tomorrow *_*",
+                        "right_side": false
+                    }
                 ]
             },
-            "No": {
-                "next": "we_dont_need_you",
+            {
+                "text": "No",
+                "next_dialog": "we_dont_need_you",
                 "messages": [
-                    "No. I changed my mind and refuse."
+                    {
+                        "text": "No. I changed my mind and refuse.",
+                        "right_side": false
+                    }
                 ]
             }
-        }
-    },
-    "dep_yes": {
-        "messages": [
-            "I will apply for your admission to the finance department."
         ]
     },
-    "dep_maybe": {
+    {
+        "name": "dep_yes",
         "messages": [
-            "Hurry up. Deadline tomorrow",
-            "you will die"
-        ],
-        "responses": {
-            "I wanna die": {
-                "next": "exit"
+            {
+                "text": "I will apply for your admission to the finance department."
             }
-        }
-    },
-    "we_dont_need_you": {
-        "messages": [
-            "We don't fucking need you then, I'm taking you off the probationary period, don't contact us ever again.",
-            "We don't need Tuniyad people"
         ]
     },
-    "exit": {
-        "messages": []
+    {
+        "name": "dep_maybe",
+        "messages": [
+            {
+                "text": "Hurry up. Deadline tomorrow"
+            },
+            {
+                "text": "you will die"
+            },
+            {
+                "text": "ok. bye",
+                "right_side": false,
+                "color": "red"
+            }
+        ]
+    },
+    {
+        "name": "we_dont_need_you",
+        "messages": [
+            {
+                "text": "We don't fucking need you then, I'm taking you off the probationary period, don't contact us ever again."
+            },
+            {
+                "text": "We don't need Tuniyad people"
+            }
+        ]
     }
-}
+]
